@@ -1,15 +1,12 @@
 <template>
-  <div
-    id="home"
-    class="wrapper"
-  >
-    <h1>Home</h1>
+  <div>
+    <h1>Отзывы</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Reviews'
 }
 </script>
 

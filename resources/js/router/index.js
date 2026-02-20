@@ -3,10 +3,17 @@ import VueRouter from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
+    name: 'Reviews',
+    component: () => import(/* webpackChunkName: "home" */ '../views/Reviews.vue'),
     meta: {
-      title: 'Главная'
+      title: 'Отзывы'
+    }
+  }, {
+    path: '/settings',
+    name: 'Settings',
+    component: () => import(/* webpackChunkName: "home" */ '../views/Settings.vue'),
+    meta: {
+      title: 'Настройки'
     }
   }
 ]
