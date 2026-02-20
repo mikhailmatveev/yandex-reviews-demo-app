@@ -9,6 +9,10 @@ class Http {
     return await this.client.get('/sanctum/csrf-cookie')
   }
 
+  async getUser () {
+    return await this.client.get('/api/user')
+  }
+
   async login (email, password) {
     return await this.client.post('/login', {
       email,

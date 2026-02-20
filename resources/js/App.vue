@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import http from './services/http'
 import LoginModal from './views/components/layout/LoginModal.vue'
 import TheHeader from './views/components/layout/TheHeader.vue'
 import TheSidebar from './views/components/layout/TheSidebar.vue'
@@ -40,7 +40,7 @@ export default {
   methods: {
     async fetchUser () {
       try {
-        const res = await axios.get('/api/user')
+        const res = await http.getUser()
         this.user = res.data
       } catch {
         this.user = null
