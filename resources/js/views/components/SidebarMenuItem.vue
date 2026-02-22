@@ -63,19 +63,19 @@ export default {
     }
   },
   computed: {
-    /**
-     * Классы элемента меню
-     * @returns {string}
-     */
-    itemClasses () {
-      const classes = []
-      if (this.router && this.router.name === this.$route.name) {
-        classes.push('active')
-      } else if (this.link === this.$route.path) {
-        classes.push('active')
-      }
-      return classes.join(' ')
-    }
+    // /**
+    //  * Классы элемента меню
+    //  * @returns {string}
+    //  */
+    // itemClasses () {
+    //   const classes = []
+    //   if (this.router && this.router.name === this.$route.name) {
+    //     classes.push('active')
+    //   } else if (this.link === this.$route.path) {
+    //     classes.push('active')
+    //   }
+    //   return classes.join(' ')
+    // }
   },
   methods: {
     handleRouterNavigation () {
@@ -89,7 +89,7 @@ export default {
   li {
     padding: 0 15px;
     margin-bottom: 10px;
-    & > .active {
+    &.router-link-exact-active {
       border-radius: 12px;
       background-color: #fff;
       box-shadow: 0 2px 1px 0 #00000005;
@@ -98,6 +98,10 @@ export default {
       color: #363740;
       text-decoration: none;
       cursor: pointer;
+      & > span {
+        display: inline-block;
+        padding: 10px 0;
+      }
     }
   }
 </style>
