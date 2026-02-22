@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Jobs;
+
 use App\Events\IntegrationSyncUpdated;
 use App\Models\Integration;
 use app\Services\YandexSyncService;
