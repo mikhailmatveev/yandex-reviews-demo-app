@@ -1,0 +1,14 @@
+@import "reset";
+@import "variables";
+
+// Apply to the html or body element to ensure global inheritance
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: $primary-font;
+}
+
+// Alternatively, use the universal selector (less common)
+* {
+    font-family: $primary-font;
+}

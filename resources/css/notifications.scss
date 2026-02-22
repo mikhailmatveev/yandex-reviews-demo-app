@@ -1,0 +1,46 @@
+@import './variables';
+
+.alert {
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+    border: 1px solid transparent;
+    border-radius: $alert-radius;
+    font-size: $alert-font-size;
+    line-height: 1.4;
+    margin-bottom: 10px;
+
+    &.alert-success {
+        background-color: $alert-success-bg;
+        border-color: $alert-success-border;
+        color: $alert-success-text;
+    }
+
+    &.alert-danger {
+        background-color: $alert-danger-bg;
+        border-color: $alert-danger-border;
+        color: $alert-danger-text;
+    }
+
+    &.alert-warning {
+        background-color: $alert-warning-bg;
+        border-color: $alert-warning-border;
+        color: $alert-warning-text;
+    }
+
+    &.alert-info {
+        background-color: $alert-info-bg;
+        border-color: $alert-info-border;
+        color: $alert-info-text;
+    }
+}
+
+/* fade-анимация как у bootstrap */
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.2s linear;
+
+    &.in {
+        opacity: 1;
+    }
+}
