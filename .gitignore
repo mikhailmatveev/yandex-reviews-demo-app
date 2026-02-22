@@ -16,6 +16,7 @@
 /public/index.html
 /public/storage
 /storage/*.key
+/storage/api-docs
 /vendor
 auth.json
 Homestead.json
