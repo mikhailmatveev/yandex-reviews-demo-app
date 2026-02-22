@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Repositories;
+
+use App\DTO\YandexReviewDTO;
 use App\Models\Integration;
 use App\Models\Review;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;

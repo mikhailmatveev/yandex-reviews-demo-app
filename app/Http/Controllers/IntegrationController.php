@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\YandexUrlParser;
 use App\Http\Requests\StoreIntegrationRequest;
+use App\Jobs\SyncYandexIntegrationJob;
 use App\Models\Integration;
 use Illuminate\Http\JsonResponse;
-use SyncYandexIntegrationJob;
-use YandexUrlParser;
 
 class IntegrationController extends Controller
 {

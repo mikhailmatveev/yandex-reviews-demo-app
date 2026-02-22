@@ -1,9 +1,9 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
-use ReviewRepository;
+use App\Repositories\ReviewRepository;
 
 class YandexClientService
 {

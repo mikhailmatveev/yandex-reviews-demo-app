@@ -1,5 +1,7 @@
 <?php
 
+namespace App\DTO;
+
 use Carbon\Carbon;
 
 class YandexReviewDTO

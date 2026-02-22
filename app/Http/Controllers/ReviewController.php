@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\ReviewResource;
 use App\Models\Integration;
+use App\Repositories\ReviewRepository;
+use App\Resources\ReviewResource;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use ReviewRepository;
 
 class ReviewController extends Controller
 {

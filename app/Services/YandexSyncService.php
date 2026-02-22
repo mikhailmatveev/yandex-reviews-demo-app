@@ -1,11 +1,12 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
+use App\DTO\YandexReviewDTO;
 use App\Models\Integration;
+use App\Repositories\ReviewRepository;
 use Carbon\Carbon;
 use Illuminate\Validation\ValidationException;
-use ReviewRepository;
 
 class YandexSyncService
 {
@@ -32,7 +33,7 @@ class YandexSyncService
             $response = $this->client->getReviews($integration->company_id, $page);
 
             foreach ($response['data'] as $item) {
-                $dto = new \YandexReviewDTO(
+                $dto = new YandexReviewDTO(
                     externalId: $item['id'],
                     author: $item['author']['name'],
                     rating: $item['rating'],

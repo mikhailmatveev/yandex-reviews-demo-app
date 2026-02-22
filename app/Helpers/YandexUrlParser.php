@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Helpers;
+
 class YandexUrlParser
 {
     public static function extractCompanyId(string $url): ?string
