@@ -4,7 +4,6 @@
     v-show="!hidden"
     tag="li"
     :to="router"
-    :class="itemClasses"
   >
     <a
       :style="{ color, backgroundColor }"
@@ -61,21 +60,6 @@ export default {
       type: String,
       default: ''
     }
-  },
-  computed: {
-    // /**
-    //  * Классы элемента меню
-    //  * @returns {string}
-    //  */
-    // itemClasses () {
-    //   const classes = []
-    //   if (this.router && this.router.name === this.$route.name) {
-    //     classes.push('active')
-    //   } else if (this.link === this.$route.path) {
-    //     classes.push('active')
-    //   }
-    //   return classes.join(' ')
-    // }
   },
   methods: {
     handleRouterNavigation () {
