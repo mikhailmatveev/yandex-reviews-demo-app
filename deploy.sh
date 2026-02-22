@@ -42,6 +42,7 @@ fi
 $DOCKER_COMPOSE run --rm php php artisan migrate --force
 $DOCKER_COMPOSE run --rm php php artisan key:generate --force
 $DOCKER_COMPOSE run --rm php php artisan db:seed --force
+$DOCKER_COMPOSE run --rm php php artisan l5-swagger:generate
 if [ "$ENVIRONMENT" = "development" ]; then
     $DOCKER_COMPOSE up
 else
