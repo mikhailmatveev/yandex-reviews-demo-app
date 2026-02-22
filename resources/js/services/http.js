@@ -9,6 +9,28 @@ class Http {
     return await this.client.get('/sanctum/csrf-cookie')
   }
 
+  async getIntegration () {
+    return await this.client.get('/api/integration')
+  }
+
+  async getReviews (page) {
+    return await this.client.get('/api/reviews', {
+      params: {
+        page
+      }
+    })
+  }
+
+  async postIntegration (url) {
+    return await this.client.post('/api/integration', {
+      url
+    })
+  }
+
+  async syncIntegration () {
+    return await this.client.post('/api/integration/sync')
+  }
+
   async getUser () {
     return await this.client.get('/api/user')
   }

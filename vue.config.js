@@ -10,29 +10,8 @@ module.exports = {
       return args
     })
 
-    // Отключаем копирование файлов из папки public
-    config.plugin('copy').tap(options => {
-      return [[/* пустой массив */]]
-    })
-
-    // const svgRule = config.module.rule('svg')
-    //
-    // const fileLoader = svgRule.use('file-loader').get('loader')
-    // const fileLoaderOptions = svgRule.use('file-loader').get('options')
-    //
-    // svgRule.uses.clear()
-    //
-    // svgRule
-    //   .oneOf('svg-import')
-    //   .resourceQuery(/inline/)
-    //   .use('vue-svg-loader')
-    //   .loader('vue-svg-loader')
-    //   .end()
-    //   .end()
-    //   .oneOf('svg')
-    //   .use('file-loader')
-    //   .loader(fileLoader)
-    //   .options(fileLoaderOptions)
+    // Полностью удаляем copy plugin
+    config.plugins.delete('copy')
   },
   devServer: {
     proxy: {

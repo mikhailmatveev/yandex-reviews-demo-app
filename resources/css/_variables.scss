@@ -1,2 +1,48 @@
-// Define a Sass variable for the font-family stack
+// Font
 $primary-font: "Source Sans Pro", Arial, sans-serif;
+
+// Colors
+$color-bg: #f8f9fa;
+$color-card: #ffffff;
+$color-border: #e4e4e7;
+$color-text: #343a40;
+$color-text-muted: #6c757d;
+$color-primary: #3b82f6;
+$color-accent: #2563eb;
+
+// Spacing
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+
+// Border radius
+$radius: 8px;
+
+// Font sizes
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 20px;
+
+// Alert colors
+$alert-success-bg: #dff0d8;
+$alert-success-border: #d6e9c6;
+$alert-success-text: #3c763d;
+
+$alert-danger-bg: #f2dede;
+$alert-danger-border: #ebccd1;
+$alert-danger-text: #a94442;
+
+$alert-warning-bg: #fcf8e3;
+$alert-warning-border: #faebcc;
+$alert-warning-text: #8a6d3b;
+
+$alert-info-bg: #d9edf7;
+$alert-info-border: #bce8f1;
+$alert-info-text: #31708f;
+
+// Alert base styles
+$alert-padding-y: 12px;
+$alert-padding-x: 16px;
+$alert-radius: 4px;
+$alert-font-size: 14px;
+

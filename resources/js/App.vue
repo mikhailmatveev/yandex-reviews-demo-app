@@ -18,7 +18,7 @@
 
 <script>
 import http from './services/http'
-import LoginModal from './views/components/layout/LoginModal.vue'
+import LoginModal from './views/components/ui/LoginModal.vue'
 import TheHeader from './views/components/layout/TheHeader.vue'
 import TheSidebar from './views/components/layout/TheSidebar.vue'
 
