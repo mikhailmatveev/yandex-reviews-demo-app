@@ -4,7 +4,7 @@ namespace App\Jobs;
 
 use App\Events\IntegrationSyncUpdated;
 use App\Models\Integration;
-use app\Services\YandexSyncService;
+use App\Services\YandexSyncService;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
