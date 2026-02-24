@@ -103,5 +103,63 @@ class IntegrationController extends Controller
             'integration' => $integration
         ]);
     }
+
+    /**
+     * @OA\Post(
+     *     path="/api/integration/sync",
+     *     summary="Запуск синхронизации отзывов Яндекс",
+     *     description="Асинхронно запускает джоб синхронизации отзывов для текущей интеграции пользователя.",
+     *     tags={"API"},
+     *
+     *     security={{"sanctumAuth":{}}},
+     *
+     *     @OA\Response(
+     *         response=200,
+     *         description="Синхронизация успешно запущена",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Синхронизация запущена")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=401,
+     *         description="Пользователь не авторизован",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Не авторизован")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Интеграция не найдена",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Интеграция не найдена")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Внутренняя ошибка сервера",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Ошибка при запуске джоба синхронизации")
+     *         )
+     *     )
+     * )
+     *
+     * @return JsonResponse
+     */
+    public function sync(): JsonResponse
+    {
+        $integration = Integration::first();
+
+        if (!$integration) {
+            return response()->json(['message' => 'Интеграция не найдена'], 404);
+        }
+
+        SyncYandexIntegrationJob::dispatch($integration);
+
+        return response()->json(['message' => 'Синхронизация запущена']);
+    }
 }
 
