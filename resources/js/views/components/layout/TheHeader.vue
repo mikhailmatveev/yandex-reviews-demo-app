@@ -14,6 +14,7 @@
 
 <script>
 import http from '../../../services/http'
+import notifications from './../../../notifications'
 
 export default {
   name: 'TheHeader',
@@ -26,7 +27,7 @@ export default {
         await http.logout()
         window.location.href = '/'
       } catch (e) {
-        console.error(e)
+        notifications.error(e)
       }
     }
   }
